@@ -119,6 +119,7 @@ module RSpec
 
       add_test_type_configurations(config)
 
+      puts "defined?(::Rails::Controller::Testing) => #{defined?(::Rails::Controller::Testing)}"
       if defined?(::Rails::Controller::Testing)
         [:controller, :view, :request].each do |type|
           config.include ::Rails::Controller::Testing::TestProcess, :type => type

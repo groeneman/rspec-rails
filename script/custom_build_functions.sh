@@ -5,6 +5,8 @@ function run_cukes {
 function run_additional_specs {
   bin/rake generate:app generate:stuff
   pushd tmp/example_app
+  cat Gemfile
+  cat Gemfile.lock
   bundle exec rspec
   popd
 }
